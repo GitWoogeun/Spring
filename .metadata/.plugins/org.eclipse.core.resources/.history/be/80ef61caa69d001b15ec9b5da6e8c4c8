@@ -1,0 +1,16 @@
+package ex02_value_ref;
+
+public class MemberDAO {
+	
+	private MemberBean bean;
+	
+	// 1. 생성자 
+	public MemberDAO(MemberBean bean) {
+		this.bean = bean;
+	}
+	
+	//setter
+	public void setBean(MemberBean bean) {
+		this.bean = bean;
+	}
+}

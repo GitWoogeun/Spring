@@ -1,0 +1,23 @@
+package com.javaclass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping("/re")  //RequestMappingController에서 ("/re")를 잡아주고
+public class RequestMappingController {
+	
+	@RequestMapping(value={"/a.do","/b.do"}) //(/a.do)를 여기서 잡는다.
+	public String test() {
+		System.out.println("a.do 요청 확인2");
+		return "hello";
+	}
+	
+	
+	/**************
+	 * 	뷰 페이지 지정 방식
+	 * 	1) ModelAndView에 setViewName() 지정
+	 * 	2) 함수의 리턴형을 String 인 경우 (******************)
+	 * 		그 리턴값이 뷰페이지
+	 */
+}

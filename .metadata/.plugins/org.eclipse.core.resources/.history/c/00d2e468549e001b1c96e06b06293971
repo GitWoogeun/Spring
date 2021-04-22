@@ -1,0 +1,17 @@
+package aop1_xml;
+
+public class MessageBeanImpl implements MessageBean {
+
+	@Override
+	public void sayHello() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void engSayHello() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

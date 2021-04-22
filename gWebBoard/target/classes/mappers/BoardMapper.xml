@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+	
+	<insert id="insertBoard" parameterType="board">
+		<![CDATA[
+		INSERT INTO BOARD(SEQ, TITLE, WRITER, CONTENT, REGDATE, CNT)
+		VALUES(board_seq.nextval,
+			#{title}, #{writer}, #{content}, 
+			sysdate, 0)
+		]]>
+	</insert>
+	
+	<update id="updateBoard" parameterType="board">
+		<![CDATA[
+		UPDATE BOARD SET
+		TITLE = #{title},
+		CONTENT = #{content}
+		WHERE SEQ = #{seq}
+		]]>
+	</update>
+	<update id="updateCnt" parameterType="board">
+		<![CDATA[
+		UPDATE BOARD SET
+		CNT = (#{cnt}+1)
+		WHERE SEQ = #{seq}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard" parameterType="board">
+		<![CDATA[
+		DELETE BOARD
+		WHERE SEQ = #{seq}
+		]]>
+	</delete>
+	
+	<select id="getBoard" parameterType="board" resultType="board">
+		<![CDATA[
+		SELECT *
+		FROM BOARD
+		WHERE SEQ = #{seq}
+		]]>
+	</select>
+	
+	<!-- * JDBC에 전송객체 
+			1. Statement
+				SELECT * FROM emp WHERE ename='" "+"SMITH" + "'"
+			2. PreparedStatement (*)
+				SELECT * FROM emp WHERE ename=?
+				ps.setInt() ->    ' 안 붙음
+				ps.setString() -> '' 붙임
+		
+		* Mybatis 전송
+			1. Statement : $ { }
+			2. PreparedStatement (일반적 보편적 주로 ) : # { }
+	-->
+	
+	<!-- 동적으로 검색 -->
+	<select id="getBoardList" parameterType="hashmap" resultType="board">
+		SELECT *
+		FROM BOARD
+		<where>
+			<if test="searchCondition != null">
+				${searchCondition} Like '%${searchKeyword}%'
+			</if>
+		</where>
+		ORDER BY SEQ DESC
+	</select>
+</mapper>

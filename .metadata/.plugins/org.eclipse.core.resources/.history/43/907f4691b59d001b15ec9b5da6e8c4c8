@@ -1,0 +1,28 @@
+package ex05_autowired;
+
+public class MessageBeanImpl implements MessageBean{
+
+	private String name;
+	private String message;
+	
+			
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public void setMessage(String message) {
+		this.message = message;
+	}
+	
+	private Outputer out;
+	
+	@Override
+	public void sayHello() {
+		System.out.println(name+"님께 "+message);
+		try {
+			out.writeMessage(name+"님께"+message);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+}

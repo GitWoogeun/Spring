@@ -1,0 +1,10 @@
+package ex05_autowired;
+
+public class MessageBeanImpl implements MessageBean{
+
+	@Override
+	public void sayHello() {
+		
+	}
+	
+}

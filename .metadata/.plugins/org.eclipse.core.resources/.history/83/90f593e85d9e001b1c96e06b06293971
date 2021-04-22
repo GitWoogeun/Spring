@@ -1,0 +1,18 @@
+package aop2_annotation;
+
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
+import org.springframework.stereotype.Component;
+
+@Component
+public class LoggingAdvice {
+		
+	//aop : around
+	public Object around(ProceedingJoinPoint point) throws Throwable{
+		String methodName = point.getSignature().getName();
+		System.out.println("<사전작업>############# : " + methodName);
+		Object obj = point.proceed();
+		System.out.println("<사후작업>@@@@@@@@@@@@@ : " + methodName);
+		return obj;
+	}
+}

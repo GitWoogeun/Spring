@@ -1,0 +1,15 @@
+package ex01_xml1;
+
+public class MessageBeanKoImpl implements MessageBean {
+
+	@Override
+	public void sayHello(String name) {
+		System.out.println(name+"님 맛점 합시다.");
+	}
+	
+	//MessageBeanKoImpl의 생성자
+	public MessageBeanKoImpl() {
+		System.out.println("ㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎㅎ");
+	}
+
+}

@@ -1,0 +1,11 @@
+package ex02_value_ref;
+
+import org.springframework.context.ApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		ApplicationContext
+	}
+
+}

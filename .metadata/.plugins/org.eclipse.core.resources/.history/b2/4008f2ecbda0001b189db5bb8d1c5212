@@ -1,0 +1,17 @@
+package com.javaclass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class AutoScanController {
+	
+	@RequestMapping("/autoScan.do")  //01_autoScan.jsp에서 
+	public ModelAndView test() {
+		System.out.println("autoScan.do 요청 확인");
+		ModelAndView mv = new ModelAndView(); //객체 생성
+		mv.setViewName("01_autoScan");  //views의 01_autoScan.jsp파일으로
+		return mv;
+	}
+}

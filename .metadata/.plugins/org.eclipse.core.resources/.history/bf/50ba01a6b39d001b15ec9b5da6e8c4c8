@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+<bean id="message" class="ex05_autowired.MessageBeanEnImpl"/>
+	<property name="name" value="이민기"></property>
+	<property name="message"><value>오늘도 화이팅</value></property>
+</beans>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 1. 멤버변수 값을 지정 방식 
+		(1) 생성자 이용
+-->
+<bean id="member" class="ex02_value_ref.MemberBean">
+	<constructor-arg value="이민기"></constructor-arg>
+	<constructor-arg value="28"></constructor-arg>
+	<constructor-arg value="저는 탁우근보다 못생겼습니다."></constructor-arg>
+</bean>
+
+
+<!-- 1. 멤버변수 값을 지정 방식 
+		(2) setter 이용
+-->
+
+<bean id="member2" class="ex02_value_ref.MemberBean">
+	<property name="name" value="홍길동"></property>
+	<property name="age" value="44"></property>
+	<property name="message"><value>제가 아는 사람 중 가장 잘생긴 사람은 탁우근 입니다.</value></property>
+</bean>
+
+
+</beans>

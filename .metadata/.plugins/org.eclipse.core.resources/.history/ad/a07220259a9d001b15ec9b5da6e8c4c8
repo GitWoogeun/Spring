@@ -1,0 +1,17 @@
+package ex02_value_ref;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class MainApp {
+
+	public static void main(String[] args) {
+		ApplicationContext context = new 
+				ClassPathXmlApplicationContext("ex02_value_ref/applicationContext.xml");
+		
+		//"member"가 MemberBean이라는 클래스 타입이라는걸 명시 
+		MemberBean b = context.getBean("member",MemberBean.class);
+		b.output();
+	}
+
+}

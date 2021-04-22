@@ -1,0 +1,13 @@
+package fDynamicWeb;
+
+import org.springframework.stereotype.Controller;
+
+/*
+ * MVC에서 C(controller)가 서블릿이다.
+ * 이 서블릿이 spring에 DispatcherServlet 파일이다.
+ * 이 파일이 내가 지정한 요청 다시 호출해주는 구조이다.
+ */
+@Controller
+public class HelloController {
+
+}

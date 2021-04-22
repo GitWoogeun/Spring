@@ -1,0 +1,13 @@
+package com.javaclass.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller //Controller 역활하는 애야 스티커 부착
+public class StartController {
+
+	@RequestMapping("/start.do")
+	public void start() {
+		System.out.println("start.do 요청 확인");
+	}
+}

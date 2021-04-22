@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;aop1_xml&apos; to &apos;cAOP/src&apos;&#x0D;&#x0A;- Original project: &apos;cAOP&apos;&#x0D;&#x0A;- Destination element: &apos;cAOP/src&apos;&#x0D;&#x0A;- Original element: &apos;cAOP/src/aop1_xml&apos;" description="Copy package" destination="/src=/optional=/true=/=/maven.pomderived=/true=/" element1="/src=/optional=/true=/=/maven.pomderived=/true=/&lt;aop1_xml" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1618540760402" version="1.0"/>
+</session>
